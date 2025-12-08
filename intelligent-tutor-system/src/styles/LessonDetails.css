@@ -1,0 +1,230 @@
+/* src/styles/LessonDetails.css */
+
+/* --- Main Container --- */
+.lesson-detail-container {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 3rem;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.08); 
+    font-family: 'Poppins', sans-serif;
+    animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Navigation --- */
+.back-btn {
+    background: transparent;
+    border: none;
+    color: #666;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+}
+
+.back-btn:hover {
+    color: #007bff;
+    background: #f0f8ff;
+    transform: translateX(-5px);
+}
+
+/* --- Header --- */
+.lesson-header {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 1.5rem;
+}
+
+.lesson-header h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #1a202c;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.5px;
+}
+
+.lesson-description {
+    font-size: 1.15rem;
+    color: #4a5568;
+    line-height: 1.6;
+    max-width: 800px;
+}
+
+.lesson-meta {
+    display: inline-flex;
+    gap: 15px;
+    margin-top: 1rem;
+}
+
+.lesson-badge {
+    background: #e3f2fd;
+    color: #007bff;
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* --- Video Section --- */
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; 
+    height: 0;
+    overflow: hidden;
+    border-radius: 15px;
+    margin-bottom: 3rem;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15); 
+    border: 4px solid white;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+}
+
+/* --- Action Buttons */
+.resources-section {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #eee;
+}
+
+.resources-buttons {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+
+.btn-primary {
+    padding: 1rem 2.5rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Purple Gradient */
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(118, 75, 162, 0.3);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-primary:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(118, 75, 162, 0.5);
+    filter: brightness(1.1);
+}
+
+
+.btn-secondary {
+    padding: 1rem 2.5rem;
+    background: white;
+    color: #333;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-secondary:hover {
+    border-color: #007bff;
+    color: #007bff;
+    background: #f0f8ff;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.1);
+}
+
+/* --- Content Boxes*/
+.what-you-learn-box {
+    border: 1px solid #e2e8f0;
+    background-color: #f8fafc;
+    padding: 2rem;
+    border-radius: 15px;
+    margin: 2rem 0;
+}
+
+.what-you-learn-box h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #2d3748;
+}
+
+.learning-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+}
+
+.learning-item {
+    display: flex;
+    gap: 12px;
+    color: #4a5568;
+    font-size: 1rem;
+    align-items: flex-start;
+}
+
+.check-icon {
+    color: #4caf50; 
+    font-weight: bold;
+}
+
+/* --- Course Content List --- */
+.course-content-section h3, .includes-section h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: #2d3748;
+}
+
+.content-item {
+    background: white;
+    border: 1px solid #e2e8f0;
+    padding: 1rem 1.5rem;
+    margin-bottom: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    transition: all 0.2s;
+}
+
+.content-item:hover {
+    background: #f7fafc;
+    border-color: #cbd5e0;
+    transform: translateX(5px);
+}
+
+.includes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.includes-item {
+    font-size: 0.95rem;
+    color: #4a5568;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}

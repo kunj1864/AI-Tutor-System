@@ -1,0 +1,38 @@
+/* src/components/LessonSidebar.css */
+.lesson-sidebar {
+  background: linear-gradient(to bottom right, #fce4ec, #f8bbd0);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(233, 30, 99, 0.2);
+}
+
+.lesson-sidebar h3 {
+  margin-bottom: 1rem;
+  color: #ad1457;
+  font-size: 1.2rem;
+}
+
+.lesson-sidebar button {
+  width: 100%;
+  padding: 0.6rem 1rem;
+  margin-bottom: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.lesson-sidebar button:hover {
+  transform: scale(1.02);
+}
+
+.lesson-sidebar .active {
+  background-color: #ec407a;
+  color: white;
+}
+
+.lesson-sidebar .inactive {
+  background-color: #f8bbd0;
+  color: #1e1e2f;
+}

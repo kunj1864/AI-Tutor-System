@@ -1,0 +1,75 @@
+/* src/components/LessonCard.css
+.lesson-card {
+  background: linear-gradient(135deg, #ffffff, #f0f4ff);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 1.5rem;
+  cursor: pointer;
+}
+
+.lesson-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.card-content h3 {
+  margin-bottom: 0.5rem;
+  color: #1e1e2f;
+}
+
+.card-content p {
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+.card-content button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.card-content button:hover {
+  background-color: #0056b3;
+} */
+
+
+
+/* src/components/LessonCard.css */
+.lesson-card {
+  background: linear-gradient(to bottom right, #e3f2fd, #bbdefb);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(33, 150, 243, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lesson-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 24px rgba(33, 150, 243, 0.3);
+  cursor: pointer;
+}
+
+.lesson-card h3 {
+  color: #0d47a1;
+  margin-bottom: 0.5rem;
+}
+
+.lesson-card p {
+  color: #1565c0;
+  margin-bottom: 1rem;
+}
+
+.lesson-card button {
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}

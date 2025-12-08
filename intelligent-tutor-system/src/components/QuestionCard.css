@@ -1,0 +1,36 @@
+/* src/components/QuestionCard.css */
+.question-card {
+  background: linear-gradient(to bottom right, #fce4ec, #f8bbd0);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(233, 30, 99, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.question-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 24px rgba(233, 30, 99, 0.3);
+  cursor: pointer;
+}
+
+.question-card h3 {
+  margin-bottom: 1rem;
+}
+
+.question-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.question-card li {
+  background-color: #e3f2fd;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.question-card li:hover {
+  background-color: #90caf9;
+}
