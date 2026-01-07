@@ -47,7 +47,7 @@ MIDDLEWARE = [
     'allauth.account.middleware.AccountMiddleware',
 ]
 
-ROOT_URLCONF = 'ai_tutor_backend.urls'
+ROOT_URLCONF = 'tutor_project.urls'
 
 TEMPLATES = [
     {
@@ -65,7 +65,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'ai_tutor_backend.wsgi.application'
+WSGI_APPLICATION = 'tutor_project.wsgi.application'
 
 # Database (Tera purana wala hi rahega, ye line mat badalna agar alag ho to)
 DATABASES = {
