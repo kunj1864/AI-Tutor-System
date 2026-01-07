@@ -24,13 +24,13 @@ from .serializers import (
 )
 
 # AI & Auth Imports
-import google.generativeai as genai
-from dj_rest_auth.registration.views import SocialLoginView
-from allauth.socialaccount.providers.google.views import GoogleOAuth2Adapter
-from allauth.socialaccount.providers.oauth2.client import OAuth2Client
+import google.generativeai as genai # type: ignore
+from dj_rest_auth.registration.views import SocialLoginView # type: ignore
+from allauth.socialaccount.providers.google.views import GoogleOAuth2Adapter # type: ignore
+from allauth.socialaccount.providers.oauth2.client import OAuth2Client # type: ignore
 
 
-# --- 1. Course Views ---
+# Course Views
 
 class TrendingCourseViewSet(viewsets.ReadOnlyModelViewSet):
     permission_classes = [AllowAny] 
@@ -50,14 +50,14 @@ class MyLessonViewSet(viewsets.ReadOnlyModelViewSet):
         return UserLesson.objects.filter(user=self.request.user)
 
 
-# --- 2. Dashboard & AI Views ---
+# Dashboard & AI Views
 
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def get_dashboard_progress(request):
     user = request.user
     
-    # --- A. Progress Calculation ---
+    # A. Progress Calculation
     total_lessons = Lesson.objects.count() or 1
     total_possible_points = total_lessons * 5 
     
@@ -72,7 +72,7 @@ def get_dashboard_progress(request):
     else:
         progress_text = f"Great! You've explored {started_lessons_count} lessons and mastered {completed_levels_count} quiz levels."
 
-    # --- B.AI Prediction
+    # B.AI Prediction
     
    
     user_progress_data = UserLevelProgress.objects.filter(user=user, score__gt=0)
@@ -153,7 +153,7 @@ def ask_ai_tutor(request):
         return Response({'error': f"AI Error: {str(e)}"}, status=500)
 
 
-# --- 3. SIMPLIFIED QUIZ LOGIC ---
+# SIMPLIFIED QUIZ LOGIC
 
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
@@ -221,7 +221,7 @@ def get_quiz_questions(request, lesson_id, level_key):
     except Lesson.DoesNotExist:
         return Response({'error': 'Lesson not found'}, status=status.HTTP_404_NOT_FOUND)
 
-    # Randomly 20 questions uthao
+    # Take Randomly 20 questions 
     questions = Question.objects.filter(lesson=lesson, level=level_key).order_by('?')[:BATCH_SIZE]
     
     if not questions:
@@ -334,7 +334,7 @@ def get_quiz_result(request, lesson_id, level_key):
         'level_unlocked': passed,
     })
 
-# --- 4. Helper Views (Start Lesson & Contact) ---
+# Helper Views (Start Lesson & Contact)
 
 @api_view(['POST'])
 @permission_classes([IsAuthenticated])
@@ -359,7 +359,7 @@ def contact_form_submit(request):
         return Response({'error': str(e)}, status=500)
 
 
-# --- Google Login ---
+# Google Login
 class GoogleLogin(SocialLoginView):
     adapter_class = GoogleOAuth2Adapter
     client_class = OAuth2Client
