@@ -15,7 +15,7 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Contact from './pages/Contact';
 
-import './styles/global.css';
+import './styles/Global.css';
 
 function App() {
   return (
