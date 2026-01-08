@@ -89,38 +89,33 @@ STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-# --- 🛑 IMPORTANT SETTINGS FOR REACT ---
-CORS_ALLOW_ALL_ORIGINS = True  # Sab allow kar diya (No Block)
+# Default primary key field type
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# --- 🛑 FINAL SECURITY SETTINGS (PRESENTATION MODE) 🛑 ---
+
+CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_CREDENTIALS = True
+
+CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_CREDENTIALS = True
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.AllowAny',
+    ],
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+    ],
+}
+
+# Auth Settings
+SITE_ID = 1
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+ACCOUNT_EMAIL_VERIFICATION = 'none'
 
 
 GOOGLE_GEMINI_API_KEY = "AIzaSyDh179wfzRCWNQiW41MPnf1FKoNuvf0-c0"
 
 
-# --- AUTH FIX FOR PRESENTATION ---
-SITE_ID = 1
-
-# Email bhejne ki koshish mat karna (Console me print kar dena bas)
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-
-# Email verification zaruri nahi hai (Direct login ho jayega)
-ACCOUNT_EMAIL_VERIFICATION = 'none'
-
-
-# --- 🛑 FINAL SECURITY FIX (SABKO AANE DO) 🛑 ---
-
-REST_FRAMEWORK = {
-    'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.AllowAny',  # <--- Ye line SABSE zaruri hai
-    ],
-    'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework.authentication.TokenAuthentication',
-        'rest_framework.authentication.SessionAuthentication',
-        # BasicAuth hata diya taaki popup na aaye
-    ],
-}
-
-# Email Backend Fix (Taaki 500 Error na aaye)
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-ACCOUNT_EMAIL_VERIFICATION = 'none'
-SITE_ID = 1
