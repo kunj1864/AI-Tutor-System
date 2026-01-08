@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import api from '../api';
 import '../styles/LessonDetails.css'; 
-import '../styles/global.css';
+import '../styles/Global.css';
 
 const LessonDetails = () => {
     const { id } = useParams();

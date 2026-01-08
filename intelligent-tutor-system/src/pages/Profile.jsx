@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import api from '../api'; 
-import '../styles/global.css'; 
+import '../styles/Global.css'; 
 import '../styles/Auth.css'; 
 import '../styles/Profile.css'; 
 

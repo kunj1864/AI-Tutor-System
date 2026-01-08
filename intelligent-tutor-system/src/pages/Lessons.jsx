@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'; 
 import api from '../api'; 
 import '../styles/Lessons_Component_Styles.css'; 
-import '../styles/global.css'; 
+import '../styles/Global.css'; 
 
 // Sidebar Component
 const LessonSidebar = ({ selectedTab, setSelectedTab }) => (

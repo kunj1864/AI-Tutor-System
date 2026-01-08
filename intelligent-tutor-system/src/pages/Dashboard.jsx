@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import api from '../api'; 
 import '../styles/Dashboard.css'; 
-import '../styles/global.css'; 
+import '../styles/Global.css'; 
 
 const Dashboard = () => {
   const [loading, setLoading] = useState(true);

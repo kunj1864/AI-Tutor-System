@@ -4,7 +4,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom'; 
 import api from '../api'; 
 import '../styles/Home.css'; 
-import '../styles/global.css'; 
+import '../styles/Global.css'; 
 
 const Home = () => {
   const [allCourses, setAllCourses] = useState([]); 

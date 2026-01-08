@@ -6,7 +6,7 @@ import api from '../api';
 import QuizCard from '../components/QuizCard'; 
 import LevelCard from '../components/LevelCard'; 
 import '../styles/Quiz_Component_Styles.css'; 
-import '../styles/global.css'; 
+import '../styles/Global.css'; 
 
 const Quiz = () => {
     const { id: urlLessonId } = useParams(); 
