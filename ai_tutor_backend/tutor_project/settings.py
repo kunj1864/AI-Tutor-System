@@ -97,3 +97,11 @@ CORS_ALLOW_CREDENTIALS = True
 GOOGLE_GEMINI_API_KEY = "AIzaSyDh179wfzRCWNQiW41MPnf1FKoNuvf0-c0"
 
 
+# --- AUTH FIX FOR PRESENTATION ---
+SITE_ID = 1
+
+# Email bhejne ki koshish mat karna (Console me print kar dena bas)
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# Email verification zaruri nahi hai (Direct login ho jayega)
+ACCOUNT_EMAIL_VERIFICATION = 'none'
