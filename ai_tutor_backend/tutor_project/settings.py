@@ -107,12 +107,20 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 
 
+# --- 🛑 FINAL SECURITY FIX (SABKO AANE DO) 🛑 ---
+
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.AllowAny',  # <-- Sabko aane do (No Login Required)
+        'rest_framework.permissions.AllowAny',  # <--- Ye line SABSE zaruri hai
     ],
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.TokenAuthentication',
         'rest_framework.authentication.SessionAuthentication',
+        # BasicAuth hata diya taaki popup na aaye
     ],
 }
+
+# Email Backend Fix (Taaki 500 Error na aaye)
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+ACCOUNT_EMAIL_VERIFICATION = 'none'
+SITE_ID = 1
