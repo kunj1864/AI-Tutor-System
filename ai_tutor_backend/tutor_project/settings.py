@@ -115,7 +115,10 @@ ACCOUNT_EMAIL_VERIFICATION = 'none'
 REST_USE_JWT = True
 JWT_AUTH_COOKIE = 'my-app-auth'
 
-
+CSRF_TRUSTED_ORIGINS = [
+    "https://ai-tutor-system-one.vercel.app",
+    "https://ai-tutor-system-413rpsh91-kunj-darjis-projects.vercel.app" 
+]
 GOOGLE_GEMINI_API_KEY = "AIzaSyDh179wfzRCWNQiW41MPnf1FKoNuvf0-c0"
 
 
