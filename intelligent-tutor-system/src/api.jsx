@@ -2,11 +2,9 @@
 
 import axios from 'axios';
 
-// 🛑 Purana Localhost wala (Abhi comment kar diya hai)
 // const API_URL = 'http://127.0.0.1:8000/api/';
 
-// ✅ NAYA LIVE URL (Render se milne ke baad yahan daalna)
-// Last me '/api/' lagana mat bhoolna!
+
 const API_URL = 'https://ai-tutor-system-1.onrender.com/api/'; 
 
 const api = axios.create({
